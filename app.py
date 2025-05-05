@@ -15,7 +15,7 @@ import mlflow.sklearn
 
 import logging
 
-os.environ["MLFLOW_TRACKING_URI"]="http://ec2-52-66-250-173.ap-south-1.compute.amazonaws.com:5000/"
+os.environ["MLFLOW_TRACKING_URI"]="EC2 Instance URL"
 
 logging.basicConfig(level=logging.WARN)
 logger=logging.getLogger(__name__)
@@ -65,7 +65,7 @@ if __name__=='__main__':
 
         #for remote server AWS setup 
 
-        remote_server_uri="http://ec2-52-66-250-173.ap-south-1.compute.amazonaws.com:5000/"
+        remote_server_uri="ec2 instance uri"
         mlflow.set_tracking_uri(remote_server_uri)
 
         tracking_url_type_store=urlparse(mlflow.get_tracking_uri()).scheme
